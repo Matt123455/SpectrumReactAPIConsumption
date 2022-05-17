@@ -64,15 +64,6 @@ const Products = () => {
         })
     }
 
-    const editProduct = (id) => {
-        axios({
-            method: "PUT",
-            url: `http://localhost:8000/api/products/${id}`,
-        }).then((response) => {
-            getProducts()
-        })
-    }
-
     const handleChange = (event) => {
         const {value, name} = event.target
         setFormProduct(prevProduct => ({
@@ -100,7 +91,6 @@ const Products = () => {
                 description={product.description}
                 slug={product.slug}
                 deletion={deleteProduct}
-                edit={editProduct}
                 />
             )}
         </div>

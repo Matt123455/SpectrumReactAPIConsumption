@@ -3,10 +3,6 @@ const List = (props) => {
         props.deletion(props.id)
     }
 
-    function handleEdit() {
-        props.edit(props.id)
-    }
-
     return (
         <div className="product">
             <h1 >  Title: {props.name} </h1>
@@ -14,7 +10,6 @@ const List = (props) => {
             <p > Description: {props.description}</p>
             <p > Slug: {props.slug}</p>
             <button onClick={handleClick}>Delete</button>
-            <button onClick={handleEdit}>Edit</button>
         </div>
     )
 }
